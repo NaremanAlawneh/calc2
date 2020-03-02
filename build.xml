@@ -12,7 +12,7 @@
 
 
 
-
+/addp/UsedLibraries/junit-4.12.jar
 
     <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
