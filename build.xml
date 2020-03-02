@@ -2,8 +2,8 @@
 <project default="compile">
 
 
-    <property name="src.java.dir" location="./src/main/java/converter"/>
-    <property name="src.test.dir" location="./src/main/java/test"/>
+    <property name="src.java.dir" location="./src/code"/>
+    <property name="src.test.dir" location="./src/test"/>
     <property name="result.dir" location="./target"/>
     <property name="result.javaclasses.dir" location="${result.dir}/classes"/>
     <property name="result.testclasses.dir" location="${result.dir}/testclasses"/>
@@ -40,7 +40,7 @@
     </target>
 
     <target name="test" depends="compile-testcases">
-        <!--fork : each test will run in its own JVM (to seperate test cases)-->
+
         <junit printsummary="true" haltonfailure="true" fork="true">
             <classpath>
                 <path refid="NecessaryLibraries"></path>
@@ -50,7 +50,7 @@
             <formatter type="brief" usefile="false"/>
             <batchtest >
                 <fileset dir="${result.testclasses.dir}" >
-                     <include name="**/*Test.class"/>
+                     <include name="**/*test.class"/>
                 </fileset>
             </batchtest>
 
